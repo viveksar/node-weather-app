@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="./css/style.css"> 
+    <!--link to add the icon to the top of web page-->
+    <link rel="icon" href="/image/img.jpg">
+
+   <title>main</title>
+</head>
+<body>
+    <div class="main-content">
+    {{>header}}
+ <p>Use this site to get your weather. </p>
+
+<!--here is the code for the input and button -->
+<form>
+<input type="text" placeholder="enter the address">
+<button>search</button>
+</form>
+
+<!--here is the code for the output which comes out-->
+<p id="message-1"></p>
+<p id="message-2"></p>
+
+
+</div>
+    {{>footer}}
+
+
+    <!--here is the link of the javascript file-->
+   <script src="./js/app.js"></script> 
+</body>
+</html>
