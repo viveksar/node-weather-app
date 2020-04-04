@@ -4,7 +4,7 @@ let hbs=require("hbs")
 
 let express=require("express")
 let app=express()
-let port=3000 
+let port=process.env.PORT || 3000
 
 //to call the geocode and weatherfunctions here
 let geocode=require('./utils/geocode')
@@ -104,5 +104,5 @@ app.get("*",(req,res)=>{
 
 //to start the server
 app.listen(port,()=>{
-    console.log("server has started")
+    console.log("server has started on port "+ port)
 })

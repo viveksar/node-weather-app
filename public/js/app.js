@@ -20,7 +20,7 @@ weatherform.addEventListener("submit",(event)=>{
     messageTwo.textContent=" "
 
 //here is the code to fetch the data for the location provided
-fetch("http://localhost:3000/weather?address="+location).then((response)=>{
+fetch("/weather?address="+location).then((response)=>{
     
         response.json().then((data)=>{
             if(data.error){
