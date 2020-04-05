@@ -32,7 +32,7 @@ app.get("/",(req,res)=>{
 app.get("/help",(req,res)=>{
  res.render("help",{
      title:"Help",
-     message:"This is help page created by me",
+     message:"This is help page created by Vivek Saroha.",
      name:"Vivek Saroha"
  })
 })
