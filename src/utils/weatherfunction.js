@@ -3,7 +3,7 @@ let request=require("request")
 //here is the function for the weather function
 let weatherfunction=(latitude,longitude,callback)=>{
     //to call the url  here 
-    let url=' https://api.darksky.net/forecast/c714ec885e8a110cca1df8a26530344f/'+latitude+','+longitude+'?lang=en'
+    let url=' https://api.darksky.net/forecast/c714ec885e8a110cca1df8a26530344f/'+latitude+','+longitude+'?lang=en&units=si'
     request({url,json:true},(error,{body})=>{
       if(error){
        callback("Unable to contact the server",undefined)

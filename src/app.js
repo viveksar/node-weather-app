@@ -71,12 +71,16 @@ app.get("/weather",(req,res)=>{
     }else{
        
       let current=weatherdata.currently
-      let anot=weatherdata.daily.data[0].summary
+      let daily=weatherdata.daily.data[0]
+     
       res.send({
         address:req.query.address,
         location:location,
-        forecast:"Today the summary is:"+anot+" The temperature outside is "+current.temperature+" and the probablity of rain is "+current.precipProbability+"."
-     
+        Summary:daily.summary,
+        temperature:current.temperature,
+        rainProbablity:current.precipProbability,
+       minTemp: daily.apparentTemperatureMin ,
+       maxTemp: daily.apparentTemperatureMax
     })
      
     }
